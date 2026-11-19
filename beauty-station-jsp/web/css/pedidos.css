@@ -1,0 +1,8 @@
+.thumbs{display:flex;gap:6px}
+.thumbs i{width:42px;height:42px;border-radius:8px;background:var(--soft-2);display:grid;place-items:center;font-style:normal;font-size:1.3rem}
+.thumbs small{align-self:center;margin:0}
+.status-box{border-radius:12px;background:var(--soft-3);padding:12px;font-size:.78rem}
+.status-box b{display:flex;gap:8px;align-items:center}
+.status-box b span{color:var(--pink-hot)}
+.status-box.done b span{color:var(--green)}
+.track-l{display:flex;justify-content:space-between;font-size:.62rem;color:var(--muted);margin-top:4px}

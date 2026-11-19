@@ -1,0 +1,26 @@
+.filters{position:sticky;top:12px;max-height:calc(100vh - 24px);overflow-y:auto}
+.filters .form-range{cursor:ew-resize}
+
+a.btn-dash{display:grid;place-items:center;text-decoration:none}
+
+.field select{flex:1;border:0;background:transparent;outline:0;height:100%;color:var(--ink)}
+
+.screen.registro{overflow-y:auto}
+.registro .login-card{padding:16px 0}
+.registro .login-card h1{margin-bottom:0}
+.registro .field{margin-bottom:8px}
+.registro .login-sub{margin-bottom:10px}
+.registro .d-flex .field{width:auto;flex:1}
+
+.cart-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--line, #f0dfe5)}
+.cart-row .pic{font-size:1.6rem;width:42px;text-align:center}
+.cart-row .qty{display:flex;align-items:center;gap:6px}
+.cart-row .qty span{min-width:20px;text-align:center;font-weight:700}
+.cart-row .cart-sub{min-width:64px;text-align:right}
+
+.notif{display:flex;gap:10px;padding:10px;border-radius:12px;margin-bottom:6px}
+.notif .e{font-size:1.4rem}
+.notif.nueva{background:rgba(242,88,138,.10)}
+
+.review{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line, #f0dfe5)}
+.review .pic{font-size:1.8rem;width:46px;text-align:center}

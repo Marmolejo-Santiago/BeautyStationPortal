@@ -1,0 +1,35 @@
+:root{
+  --bg:#F9F9F9;            /* Blanco */
+  --soft:#EDC0BF;          /* Rosa algodón */
+  --soft-2:#fbe3e6;
+  --soft-3:#fdf0f2;
+  --pink:#FF6F91;          /* Rosa magenta */
+  --pink-hot:#F23B6C;      /* Rosa magenta intenso*/
+  --ink:#1E1E24;           /* Negro */
+  --muted:#8F9EAE;         /* Gris */
+  --line:#f1e3e6;
+  --green:#2e9f6b;
+  --radius:16px;
+  --shadow:0 6px 20px rgba(242,59,108,.08);
+  --font:'Plus Jakarta Sans',system-ui,sans-serif;
+
+  --bs-primary:#FF6F91; --bs-primary-rgb:255,111,145;
+  --bs-primary-bg-subtle:#fbe3e6; --bs-primary-text-emphasis:#F23B6C;
+  --bs-body-bg:#F9F9F9; --bs-body-color:#1E1E24; --bs-body-font-family:var(--font);
+  --bs-secondary-color:#8F9EAE; --bs-border-color:#f1e3e6;
+  --bs-border-radius:12px; --bs-link-color:#F23B6C;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+h1,h2,h3,h4,h5,h6,p{margin:0}
+.fw-extrabold{font-weight:800}
+html{font-size:15px}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);min-height:100vh;overflow-x:hidden}
+button,input,select,textarea{font-family:inherit;font-size:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none}
+a{color:inherit;text-decoration:none}
+.hidden{display:none!important}
+svg{display:block}
+
+.logo{font-family:'Playfair Display',serif;font-weight:700;display:flex;justify-content:center;line-height:.8;color:var(--ink)}
+.logo span:last-child{margin-left:-.28em;margin-top:.35em}
+.logo-xl{font-size:7rem}.logo-lg{font-size:4rem}.logo-md{font-size:2.6rem;color:#fff;padding:26px 0 18px}

@@ -1,0 +1,42 @@
+.page-in{animation:page-in .35s ease}
+@keyframes page-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+.btn-primary{--bs-btn-color:#fff;--bs-btn-bg:var(--pink);--bs-btn-border-color:var(--pink);
+  --bs-btn-hover-color:#fff;--bs-btn-hover-bg:#ff5a82;--bs-btn-hover-border-color:#ff5a82;
+  --bs-btn-active-color:#fff;--bs-btn-active-bg:var(--pink-hot);--bs-btn-active-border-color:var(--pink-hot);
+  --bs-btn-focus-shadow-rgb:242,59,108}
+.btn-outline-primary{--bs-btn-color:var(--pink-hot);--bs-btn-border-color:var(--pink);
+  --bs-btn-hover-color:var(--pink-hot);--bs-btn-hover-bg:var(--soft-2);--bs-btn-hover-border-color:var(--pink);
+  --bs-btn-active-color:#fff;--bs-btn-active-bg:var(--pink);--bs-btn-active-border-color:var(--pink);
+  --bs-btn-focus-shadow-rgb:242,59,108;background:#fff}
+.btn-outline-danger{background:#fff}
+.btn-light{--bs-btn-color:var(--pink-hot);--bs-btn-bg:#fff;--bs-btn-border-color:#fff;
+  --bs-btn-hover-color:var(--pink-hot);--bs-btn-hover-bg:var(--soft-2);--bs-btn-hover-border-color:var(--soft-2);
+  --bs-btn-active-color:var(--pink-hot);--bs-btn-active-bg:var(--soft)}
+.btn-primary:active,.btn-primary:focus-visible{background:var(--pink-hot)}
+
+.form-control,.form-select{border-color:var(--line);background-color:var(--bg)}
+.form-control:focus,.form-select:focus{border-color:var(--pink);box-shadow:0 0 0 .2rem rgba(255,111,145,.2)}
+.form-check-input:checked{background-color:var(--pink-hot);border-color:var(--pink-hot)}
+.form-check-input:focus{border-color:var(--pink);box-shadow:0 0 0 .2rem rgba(255,111,145,.2)}
+.form-range::-webkit-slider-thumb{background:var(--pink-hot)}
+.form-range::-moz-range-thumb{background:var(--pink-hot)}
+.field .form-control{border:0;background:transparent;box-shadow:none;padding:0;height:100%}
+.field .form-control:focus{box-shadow:none}
+
+#nav .nav-link{color:#fff;background:transparent}
+#nav .nav-link:hover{color:#fff}
+#nav .nav-link.active{color:var(--pink-hot)}
+
+.pills .nav-link{background:var(--bg);border:1px solid var(--line);color:var(--ink);font-weight:600;font-size:.84rem;padding:.5rem 1.1rem;border-radius:999px}
+.pills .nav-link:hover{background:var(--soft-3)}
+.pills .nav-link.active{background:var(--pink);border-color:var(--pink);color:#fff}
+.pills-sm .nav-link{font-size:.72rem;padding:.3rem .7rem}
+
+.bg-hot{background-color:var(--pink-hot)!important;color:#fff}
+.product .product-tag{position:absolute;top:16px;left:16px;z-index:1}
+.progress{background:#e6e9ee}
+.progress-bar{background:var(--pink-hot)}
+.order-item:last-child{border-bottom:0!important}
+.modal-content{border-radius:var(--radius);border:0}
+.toast{--bs-toast-bg:var(--ink)}

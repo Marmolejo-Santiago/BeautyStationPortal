@@ -1,0 +1,6 @@
+.promo-card .pic{height:130px}
+.promo-card .disc{position:absolute;top:16px;left:16px;background:var(--pink-hot);color:#fff;font-weight:800;font-size:.76rem;padding:3px 10px;border-radius:99px;z-index:1}
+.promo-card .cat-l{font-size:.64rem;font-weight:800;color:var(--pink-hot);letter-spacing:.5px;text-transform:uppercase}
+.promo-card p{font-size:.74rem;color:var(--muted)}
+.old{color:var(--muted);text-decoration:line-through;font-weight:500;font-size:.78rem;margin-left:6px}
+.now{color:var(--pink-hot);font-weight:800;font-size:1.1rem}
