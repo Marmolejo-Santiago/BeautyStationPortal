@@ -23,3 +23,4 @@
 .icon-btn:hover{background:var(--soft-2);color:var(--pink-hot)}
 .dot{position:absolute;top:8px;right:9px;width:8px;height:8px;border-radius:50%;background:var(--pink-hot)}
 .count{position:absolute;top:2px;right:0;min-width:17px;height:17px;border-radius:99px;background:var(--pink-hot);color:#fff;font-size:.65rem;font-style:normal;font-weight:700;display:grid;place-items:center;padding:0 4px}
+
