@@ -73,7 +73,7 @@
           <c:when test="${not empty carritoItems}">
             <c:forEach var="i" items="${carritoItems}">
               <div class="cart-row">
-                <span class="pic">${i.producto.emoji}</span>
+                <span class="pic"><t:foto src="${i.producto.imagen}" emoji="${i.producto.emoji}" alt="${i.producto.nombre}"/></span>
                 <div class="flex-fill"><b class="small d-block">${i.producto.nombre}</b><small class="text-body-secondary">${bs:money(i.producto.precioFinal)}</small></div>
                 <div class="qty">
                   <button type="submit" class="btn btn-outline-primary btn-sm" form="acciones" formaction="${ctx}/carrito" name="accion" value="menos:${i.id}" aria-label="Quitar uno">−</button>

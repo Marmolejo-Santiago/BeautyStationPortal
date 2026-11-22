@@ -1,5 +1,5 @@
 <t:layout ruta="usuario">
-    <t:banner icono="user" titulo="Mi usuario" sub="Aquí puedes gestionar tu información, direcciones y preferencias.">Tu belleza,<br>también está<br>en tus manos ♡</t:banner>
+    <t:banner arte="art-usuario" icono="user" titulo="Mi usuario" sub="Aquí puedes gestionar tu información, direcciones y preferencias.">Tu belleza,<br>también está<br>en tus manos ♡</t:banner>
     <div class="row g-3">
       <div class="col-8"><div class="card profile h-100"><div class="big-av"><t:ic n="user" s="44"/></div><div><h2 class="fs-5 fw-bold"><c:out value="${usuario.nombre}"/></h2><small class="d-block text-body-secondary"><c:out value="${usuario.email}"/></small><span class="badge rounded-pill bg-primary-subtle text-primary-emphasis my-1">Cliente desde ${usuario.anioRegistro}</span><small class="d-block text-body-secondary"><c:out value="${usuario.frase}"/></small></div>
         <a class="btn btn-outline-primary btn-sm ms-auto" href="#editar-perfil"><t:ic n="edit" s="14"/> Editar perfil</a></div></div>

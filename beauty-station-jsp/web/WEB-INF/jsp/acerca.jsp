@@ -1,14 +1,14 @@
 <t:layout ruta="acerca">
     <section class="banner"><div><small class="script" style="font-size:1rem">SOBRE NOSOTRAS</small><h1>Belleza, estilo y<br><span class="script" style="font-size:2.3rem">pasión en un solo lugar ♡</span></h1>
       <p>En BS creemos que la belleza no es solo una apariencia, sino una forma de sentirte bien, segura y única.</p></div>
-      <div class="logo logo-lg"><span>B</span><span>S</span></div><div class="art"></div></section>
+      <div class="logo logo-lg"><span>B</span><span>S</span></div><div class="art art-acerca"></div></section>
     <div class="row g-3">
       <div class="col-3"><div class="card story h-100"><h3><span><t:ic n="heart"/></span>NUESTRA HISTORIA</h3><h2 class="fs-6 fw-bold mb-3">De una idea a un gran sueño</h2>
         <p>BS nació hace 5 años, cuando tres amigas, unidas por su amor a la belleza y el estilo, decidieron emprender juntas un proyecto que reflejara su pasión y creatividad.</p>
         <p>Lo que comenzó como un pequeño sueño, hoy es un espacio donde ofrecemos productos y experiencias que realzan la confianza y la belleza de cada persona.</p>
         <div class="big-years">5 años<br><small style="font-size:1rem">de sueños, estilo y belleza</small></div></div></div>
       <div class="col-3"><div class="card h-100"><h3><span><t:ic n="user"/></span>LAS FUNDADORAS</h3><p class="small text-center">Tres emprendedoras, un mismo propósito.</p>
-        <div class="founders"><i></i><i></i><i></i></div>
+        <div class="founders"><i><img src="${ctx}/img/fundadoras/sofia.jpg" alt="Sofía"></i><i><img src="${ctx}/img/fundadoras/valeria.jpg" alt="Valeria"></i><i><img src="${ctx}/img/fundadoras/daniela.jpg" alt="Daniela"></i></div>
         <div class="quote">“Juntas aprendimos que la belleza también se construye con sueños, esfuerzo y amistad.” <div style="color:var(--pink-hot);margin-top:6px">♡</div></div></div></div>
       <div class="col-3"><div class="card h-100"><h3><span><t:ic n="pin"/></span>¿DÓNDE ESTAMOS?</h3><div class="map"></div>
         <p class="small mb-1">${direccion}</p><a class="link small" href="https://maps.google.com" target="_blank" rel="noopener">Ver en Google Maps →</a>

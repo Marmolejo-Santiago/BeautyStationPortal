@@ -27,6 +27,8 @@ public class Servicio implements Serializable {
     private String especificacion;
     @Column(name = "DurAprox")
     private Integer min;
+    @Column(name = "Imagen")
+    private String imagen;
 
     public Integer getId() { return id; }
     public void setId(Integer id) { this.id = id; }
@@ -40,6 +42,9 @@ public class Servicio implements Serializable {
     public void setEspecificacion(String especificacion) { this.especificacion = especificacion; }
     public Integer getMin() { return min == null ? 0 : min; }
     public void setMin(Integer min) { this.min = min; }
+
+    public String getImagen() { return imagen; }
+    public void setImagen(String imagen) { this.imagen = imagen; }
 
     public int getPrecio() { return costo == null ? 0 : costo.intValue(); }
 }

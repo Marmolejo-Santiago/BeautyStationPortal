@@ -1,7 +1,7 @@
 <t:layout ruta="catalogo">
     <c:set var="e" value="${sessionScope.app}"/>
     <section class="banner"><div><small class="script" style="font-size:1rem">DESCUBRE NUESTRO</small><h1>Catálogo de productos</h1><p>Moda, belleza y accesorios en un solo lugar.<br>¡Haz que cada detalle cuente!</p>
-      <a class="btn btn-primary btn-sm mt-3" href="${ctx}/catalogo?limpiar=1">Ver todos los productos →</a></div><div class="script">Tu estilo,<br>tu esencia ♡</div><div class="art"></div></section>
+      <a class="btn btn-primary btn-sm mt-3" href="${ctx}/catalogo?limpiar=1">Ver todos los productos →</a></div><div class="script">Tu estilo,<br>tu esencia ♡</div><div class="art art-catalogo"></div></section>
     <t:categorias base="/catalogo" actual="${cat}" conTodas="${false}"/>
     <div class="row g-3">
       <div class="col-3"><aside class="card filters">

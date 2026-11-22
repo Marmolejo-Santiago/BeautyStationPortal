@@ -27,6 +27,7 @@ import com.beautystation.modelo.CarritoItem;
 import com.beautystation.modelo.Categoria;
 import com.beautystation.modelo.EstadoApp;
 import com.beautystation.modelo.Servicio;
+import com.beautystation.modelo.Usuario;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.List;
@@ -64,6 +65,13 @@ public abstract class PaginaServlet extends HttpServlet {
         HttpSession sesion = req.getSession(true);
         sesion.setAttribute(AuthFilter.SESION, idUsuario);
         EstadoApp.de(sesion);
+    }
+
+    protected void iniciarSesion(HttpServletRequest req, Usuario u) {
+        iniciarSesion(req, u.getId());
+        HttpSession sesion = req.getSession();
+        sesion.setAttribute(AuthFilter.ROL, u.getRol());
+        if (u.isAdmin()) sesion.setAttribute("nombreAdmin", u.getNombre());
     }
 
     protected void mostrar(HttpServletRequest req, HttpServletResponse resp, String vista)

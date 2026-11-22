@@ -1,5 +1,5 @@
 <t:layout ruta="pedidos">
-    <t:banner icono="box" titulo="Mis pedidos" sub="Aquí puedes ver el historial y estado de tus compras.">Gracias por<br>ser parte de BS ♡</t:banner>
+    <t:banner arte="art-pedidos" icono="box" titulo="Mis pedidos" sub="Aquí puedes ver el historial y estado de tus compras.">Gracias por<br>ser parte de BS ♡</t:banner>
     <div class="nav nav-pills pills gap-2 mb-3">
       <c:forEach var="op" items="${filtros}">
         <c:url var="u" value="/pedidos"><c:param name="estado" value="${op[0]}"/></c:url>
@@ -13,7 +13,7 @@
             <c:forEach var="o" items="${pedidos}">
               <div class="order-item p-3 border-bottom" id="o-${o.codigo}"><div class="row g-3 align-items-center">
                 <div class="col-3"><h4 class="fs-6 fw-bold">Pedido #${o.codigo}</h4><small class="d-block text-body-secondary mb-2">Realizado el ${o.fecha}</small><t:badge txt="${o.estado}" k="${o.tipoBadge}"/><br><a class="btn btn-outline-primary btn-sm mt-3" href="#detalle-${o.codigo}">Ver detalles →</a></div>
-                <div class="col-3"><small class="text-body-secondary">${o.cantidad} productos</small><div class="thumbs"><c:forEach var="em" items="${o.items}"><i>${em}</i></c:forEach></div></div>
+                <div class="col-3"><small class="text-body-secondary">${o.cantidad} productos</small><div class="thumbs"><c:forEach var="em" items="${o.items}"><i><t:foto src="${em.imagen}" emoji="${em.emoji}" alt="${em.nombre}"/></i></c:forEach></div></div>
                 <div class="col-2"><small class="text-body-secondary d-block">Total</small><b class="fs-6">${bs:money(o.total)}</b>
                   <c:choose>
                     <c:when test="${o.estado == 'En camino'}"><a class="d-block link small mt-1" href="${ctx}/pedidos?rastreo=${o.codigo}">Rastrear pedido →</a></c:when>
@@ -61,7 +61,7 @@
         <a class="modal-bg" href="#cerrar" aria-label="Cerrar"></a>
         <div class="modal-dialog modal-dialog-centered"><div class="modal-content">
           <div class="modal-header"><h5 class="modal-title fw-bold">Pedido #${o.codigo}</h5><a class="btn-close" href="#cerrar" aria-label="Cerrar"></a></div>
-          <div class="modal-body"><p class="mb-1">Realizado el ${o.fecha}</p><div class="thumbs mb-2"><c:forEach var="em" items="${o.items}"><i>${em}</i></c:forEach></div><p class="mb-0"><b>${o.cantidad} productos</b> · ${bs:money(o.total)} · ${o.estado}</p></div>
+          <div class="modal-body"><p class="mb-1">Realizado el ${o.fecha}</p><div class="thumbs mb-2"><c:forEach var="em" items="${o.items}"><i><t:foto src="${em.imagen}" emoji="${em.emoji}" alt="${em.nombre}"/></i></c:forEach></div><p class="mb-0"><b>${o.cantidad} productos</b> · ${bs:money(o.total)} · ${o.estado}</p></div>
           <div class="modal-footer"><a class="btn btn-outline-primary" href="#cerrar">Cerrar</a></div>
         </div></div>
       </div>

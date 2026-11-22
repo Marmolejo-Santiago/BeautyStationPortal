@@ -1,0 +1,37 @@
+/* ---------- Imágenes del Look and Feel (solo fotos; el resto de estilos no cambia) ---------- */
+.pic, .thumb, .thumbs i, .founders i { overflow: hidden; }
+.pic img, .thumb img, .thumbs i img, .founders i img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cat .thumb { padding: 0; }
+.cart-row .pic { height: 42px; border-radius: 8px; }
+.review .pic { height: 46px; border-radius: 8px; }
+
+/* Banner de inicio: foto a la derecha que se funde con el degradado rosa */
+.banner.hero {
+  background:
+    linear-gradient(100deg, #ff7fa0 0%, #f9a3b9 38%, rgba(249, 163, 185, 0) 58%),
+    url('../img/banners/inicio.jpg') right center / auto 100% no-repeat,
+    #f9a3b9;
+}
+
+/* Fotos de los banners de cada página */
+.banner .art.art-acerca     { background: url('../img/banners/acerca.jpg') center / cover; opacity: 1; }
+.banner .art.art-catalogo   { background: url('../img/banners/catalogo.jpg') center / cover; opacity: 1; }
+.banner .art.art-promociones{ background: url('../img/banners/promociones.jpg') center / cover; opacity: 1; }
+.banner .art.art-citas      { background: url('../img/banners/citas.jpg') center / cover; opacity: 1; }
+.banner .art.art-miscitas   { background: url('../img/banners/miscitas.jpg') center / cover; opacity: 1; }
+.banner .art.art-pedidos    { background: url('../img/banners/pedidos.jpg') center / cover; opacity: 1; }
+.banner .art.art-usuario    { background: url('../img/banners/usuario.jpg') center / cover; opacity: 1; }
+
+/* Acerca de: mapa y tarjeta vertical */
+.map { background: url('../img/fondos/mapa.jpg') center / cover; }
+.map::after { content: none; }
+.cta-vertical {
+  background: url('../img/fondos/acerca-cta.png') center 62% / 100% auto no-repeat, linear-gradient(180deg, #f9c9d4, #ff6f91);
+}
+
+/* Pantalla de carga y foto del inicio de sesión */
+.screen.splash { background: url('../img/fondos/carga.jpg') center / cover, #f2588a; }
+.splash .blob { display: none; }
+.login-photo {
+  background: url('../img/fondos/salon.jpg') center / cover, linear-gradient(160deg, #c9a38d, #8d5f4b 60%, #e6c7b8);
+}

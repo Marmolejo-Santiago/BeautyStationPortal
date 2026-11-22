@@ -22,6 +22,7 @@ public class AppListener implements ServletContextListener {
 
         app.setAttribute("rutas", Datos.RUTAS);
         app.setAttribute("rutasPorClave", porClave);
+        app.setAttribute("rutasAdmin", Datos.RUTAS_ADMIN);
         app.setAttribute("iconos", Iconos.todos());
         app.setAttribute("horarios", Datos.HORARIOS);
         app.setAttribute("direccion", Datos.DIRECCION);

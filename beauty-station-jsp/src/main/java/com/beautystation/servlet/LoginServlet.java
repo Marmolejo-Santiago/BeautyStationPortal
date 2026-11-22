@@ -17,7 +17,7 @@ public class LoginServlet extends PaginaServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession sesion = req.getSession(false);
         if (sesion != null && sesion.getAttribute(AuthFilter.SESION) != null) {
-            irA(req, resp, "/inicio");
+            irA(req, resp, "ADMIN".equals(sesion.getAttribute(AuthFilter.ROL)) ? "/admin/citas" : "/inicio");
             return;
         }
         req.getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(req, resp);
@@ -36,8 +36,8 @@ public class LoginServlet extends PaginaServlet {
             error(req, resp, "Correo o contraseña incorrectos");
             return;
         }
-        iniciarSesion(req, u.getId());
-        irA(req, resp, "/inicio");
+        iniciarSesion(req, u);
+        irA(req, resp, u.isAdmin() ? "/admin/citas" : "/inicio");
     }
 
     private void error(HttpServletRequest req, HttpServletResponse resp, String mensaje)

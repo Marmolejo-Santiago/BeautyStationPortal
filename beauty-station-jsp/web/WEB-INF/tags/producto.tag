@@ -13,7 +13,7 @@
   <article class="product ${grande ? 'product-lg' : ''}" id="p-${p.id}">
     <c:if test="${etiqueta and not empty p.etiqueta}"><span class="badge rounded-pill product-tag ${p.etiqueta == 'Más vendido' ? 'bg-hot' : 'bg-primary'}">${p.etiqueta}</span></c:if>
     <button class="fav ${sessionScope.app.favoritos.contains(p.id) ? 'on' : ''}" form="acciones" formaction="${ctx}/favorito" name="id" value="${p.id}" aria-label="Favorito"><t:ic n="heart" s="15"/></button>
-    <div class="pic">${p.emoji}</div>
+    <div class="pic"><t:foto src="${p.imagen}" emoji="${p.emoji}" alt="${p.nombre}"/></div>
     <div class="name">${p.nombre}</div>
     <c:if test="${valoracion}"><div class="stars">${bs:stars(p.rating)}<small>(${p.resenas})</small></div></c:if>
     <div class="price ${grande ? 'big' : ''}">${bs:money(p.precio)}</div>

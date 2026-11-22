@@ -24,8 +24,9 @@ public class InicioServlet extends PaginaServlet {
         }
         req.setAttribute("destacados", destacados);
         req.setAttribute("categoriasInicio", List.of(
-                new String[]{"Ropa", "👗"}, new String[]{"Calzado", "👟"}, new String[]{"Accesorios", "🕶️"},
-                new String[]{"Belleza", "💄"}, new String[]{"Nuevos ingresos", "👛"}));
+                new String[]{"Ropa", "img/categorias/ropa.jpg"}, new String[]{"Calzado", "img/categorias/calzado.jpg"},
+                new String[]{"Accesorios", "img/categorias/accesorios.jpg"}, new String[]{"Belleza", "img/categorias/belleza.jpg"},
+                new String[]{"Nuevos ingresos", "img/categorias/nuevos-ingresos.jpg"}));
         mostrar(req, resp, "inicio");
     }
 }

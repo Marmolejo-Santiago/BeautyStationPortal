@@ -1,5 +1,5 @@
 <t:layout ruta="miscitas">
-    <t:banner icono="calendar" titulo="Mis citas" sub="Aquí puedes ver y gestionar tus citas programadas.">Tu belleza,<br>nuestra prioridad ♡</t:banner>
+    <t:banner arte="art-miscitas" icono="calendar" titulo="Mis citas" sub="Aquí puedes ver y gestionar tus citas programadas.">Tu belleza,<br>nuestra prioridad ♡</t:banner>
     <div class="row g-3">
       <div class="col-3"><div class="card">
         <form method="post" action="${ctx}/miscitas">
@@ -15,7 +15,7 @@
             <c:forEach var="a" items="${citas}">
               <div class="appt">
                 <div class="date">${a.diaSemana}<b>${a.diaNumero}</b>${a.mesCorto} ${a.anio}</div>
-                <div class="pic">${a.emoji}</div>
+                <div class="pic"><t:foto src="${a.imagen}" emoji="${a.emoji}" alt="${a.servicio}"/></div>
                 <div><h4>${a.servicio}</h4><small><span><t:ic n="clock" s="13"/></span>${a.hora}</small><small><span><t:ic n="pin" s="13"/></span>${direccion}</small></div>
                 <div class="side"><t:badge txt="${a.estado}" k="${a.tipoBadge}"/>
                   <div class="d-flex gap-2"><a class="btn btn-primary btn-sm" href="#detalle-${a.id}">Ver detalles →</a>

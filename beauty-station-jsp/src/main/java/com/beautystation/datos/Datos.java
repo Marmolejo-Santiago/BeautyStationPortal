@@ -21,5 +21,11 @@ public final class Datos {
             new Ruta("resenas", "Reseñas", "star", "Buscar en las reseñas...", false),
             new Ruta("usuario", "Usuario", "user", "Buscar en mi cuenta...", true));
 
+    /** Menú de la cuenta de administración (la clave es la ruta del panel). */
+    public static final List<Ruta> RUTAS_ADMIN = List.of(
+            new Ruta("admin/citas", "Citas", "calendar", "Buscar en las citas...", false),
+            new Ruta("admin/pedidos", "Pedidos", "box", "Buscar en los pedidos...", false),
+            new Ruta("admin/catalogo", "Catálogo", "tag", "Buscar en el catálogo...", false));
+
     private Datos() { }
 }

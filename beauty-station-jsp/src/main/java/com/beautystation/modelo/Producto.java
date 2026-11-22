@@ -38,6 +38,12 @@ public class Producto implements Serializable {
     private Double rating;
     @Column(name = "NumResenas")
     private Integer resenas;
+    @Column(name = "Imagen")
+    private String imagen;
+    @Column(name = "ImagenPromo")
+    private String imagenPromo;
+    @Column(name = "Activo")
+    private Boolean activo = true;
 
     @ManyToOne
     @JoinColumn(name = "Id_Categoria")
@@ -65,6 +71,16 @@ public class Producto implements Serializable {
     public void setResenas(Integer resenas) { this.resenas = resenas; }
     public Categoria getCategoria() { return categoria; }
     public void setCategoria(Categoria categoria) { this.categoria = categoria; }
+
+    /** Ruta relativa de la foto (img/... o media/...); vacía si el producto aún no tiene foto. */
+    public String getImagen() { return imagen; }
+    public void setImagen(String imagen) { this.imagen = imagen; }
+    /** Foto de la tarjeta de promociones; si no hay una propia se usa la normal. */
+    public String getImagenPromo() { return imagenPromo == null || imagenPromo.isEmpty() ? imagen : imagenPromo; }
+    public void setImagenPromo(String imagenPromo) { this.imagenPromo = imagenPromo; }
+    /** false = eliminado del catálogo (se conserva para no romper pedidos y reseñas anteriores). */
+    public boolean isActivo() { return activo == null || activo; }
+    public void setActivo(Boolean activo) { this.activo = activo; }
 
     public BigDecimal getPrecioFinal() {
         BigDecimal factor = BigDecimal.valueOf(100 - getDescuento()).divide(BigDecimal.valueOf(100));

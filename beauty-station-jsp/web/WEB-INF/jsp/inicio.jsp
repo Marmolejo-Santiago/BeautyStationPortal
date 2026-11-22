@@ -8,7 +8,7 @@
     <div class="section-head"><h2>Categorías</h2><a href="${ctx}/catalogo">Ver todas →</a></div>
     <div class="row row-cols-5 g-3">
       <c:forEach var="cat" items="${categoriasInicio}">
-        <div class="col"><a class="cat" href="${ctx}/catalogo"><div class="thumb">${cat[1]}</div><div class="n">${cat[0]} <t:ic n="chev" s="14"/></div></a></div>
+        <div class="col"><a class="cat" href="${ctx}/catalogo"><div class="thumb"><img src="${ctx}/${cat[1]}" alt="${cat[0]}" loading="lazy"></div><div class="n">${cat[0]} <t:ic n="chev" s="14"/></div></a></div>
       </c:forEach>
     </div>
     <div class="promo-strip"><div class="ico">%</div><div><small>PROMOCIONES ESPECIALES</small><h3>Hasta 30% de descuento</h3><p>en productos seleccionados</p></div>

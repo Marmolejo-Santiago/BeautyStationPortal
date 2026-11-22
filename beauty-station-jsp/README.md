@@ -27,6 +27,10 @@ Despues configura el tomcat con el deployment directory en la carpeta beauty-sta
 
 Usuario de ejemplo: `sofia.martinez@email.com` / `sofia123`
 
+Cuenta de administración: `admin@beautystation.com` / `admin123` (entra directo al panel `/admin/citas`)
+
+> Si ya tienes la base de datos creada y no quieres recrearla, ejecuta una sola vez `sql/migracion_admin_imagenes.sql`.
+
 ## Cambios principales
 - **Varios servicios en una cita**
 - **Filtro de precio scrolleable**
@@ -41,4 +45,10 @@ Usuario de ejemplo: `sofia.martinez@email.com` / `sofia123`
 - **Se añadio registrarse**
 - **Reseñas**
 
-## Falta añadir solamente imagenes en la carpeta que ya esta creada (Leeme.txt)
+- **Imágenes** en `web/img/` 
+- **Cuenta de administradora**
+  - `/admin/citas`: ver las citas asignadas, agendar nuevas y cancelarlas.
+  - `/admin/pedidos`: ver los pedidos de todas las clientas.
+  - `/admin/catalogo`: agregar productos con foto y eliminarlos 
+- Las fotos que sube la administradora se guardan en la carpeta `~/beauty-station-uploads`
+- El tope del filtro de precio del catálogo ($2,000) ahora significa "$2,000 o más"

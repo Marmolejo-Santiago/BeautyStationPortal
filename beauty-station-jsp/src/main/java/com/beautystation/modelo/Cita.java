@@ -84,6 +84,10 @@ public class Cita implements Serializable {
         return servicios.isEmpty() ? "✨" : servicios.get(0).getServicio().getEmoji();
     }
 
+    public String getImagen() {
+        return servicios.isEmpty() ? null : servicios.get(0).getServicio().getImagen();
+    }
+
     public String getTipoBadge() {
         switch (estado) {
             case "Confirmada": return "ok";

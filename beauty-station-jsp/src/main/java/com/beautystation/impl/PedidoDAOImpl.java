@@ -29,6 +29,17 @@ public class PedidoDAOImpl implements PedidoDAO {
     }
 
     @Override
+    public List<Pedido> listarTodos(String estado) {
+        boolean filtrar = estado != null && !estado.isEmpty() && !estado.equals("Todos");
+        return HibernateUtil.ejecutar(s -> {
+            org.hibernate.query.Query<Pedido> q = s.createQuery(
+                    "from Pedido p" + (filtrar ? " where p.estado = :e" : "") + " order by p.idPedido desc", Pedido.class);
+            if (filtrar) q.setParameter("e", estado);
+            return q.list();
+        });
+    }
+
+    @Override
     public Pedido buscarPorCodigo(int idUsuario, String codigo) {
         if (codigo == null) return null;
         Matcher m = CODIGO.matcher(codigo.trim());
@@ -65,6 +76,9 @@ public class PedidoDAOImpl implements PedidoDAO {
             BigDecimal total = BigDecimal.ZERO;
             for (CarritoItem item : items) {
                 Producto producto = item.getProducto();
+                if (!producto.isActivo()) {
+                    throw new IllegalStateException(producto.getNombre() + " ya no está disponible");
+                }
                 int stock = producto.getStock() == null ? 0 : producto.getStock();
                 if (stock < item.getCantidad()) {
                     throw new IllegalStateException("No hay suficiente stock de " + producto.getNombre());

@@ -13,4 +13,15 @@ public interface CitaDAO {
     Cita crear(int idUsuario, LocalDate dia, String hora, Collection<Integer> idsServicios, String nota);
 
     boolean cancelar(int idCita, int idUsuario);
+
+    // ----- administración -----
+
+    /** Todas las citas (de cualquier clienta). estado = null o "Todas" para no filtrar. */
+    List<Cita> listarTodas(String estado);
+
+    /** idUsuario = null agenda para una clienta sin cuenta (solo con su nombre). */
+    Cita crearPorAdmin(Integer idUsuario, String nombreCliente, LocalDate dia, String hora,
+                       Collection<Integer> idsServicios, String nota);
+
+    boolean cancelarPorAdmin(int idCita);
 }

@@ -9,4 +9,7 @@ public interface PedidoDAO {
     Pedido buscarPorCodigo(int idUsuario, String codigo);
 
     Pedido crearDesdeCarrito(int idUsuario, int idDireccion, int idMetodo);
+
+    /** Todos los pedidos de todas las clientas (administración). estado = null o "Todos" para no filtrar. */
+    List<Pedido> listarTodos(String estado);
 }

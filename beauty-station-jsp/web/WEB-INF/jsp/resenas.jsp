@@ -1,5 +1,5 @@
 <t:layout ruta="resenas">
-    <t:banner icono="star" titulo="Reseñas" sub="Lee lo que opinan nuestras clientas y comparte tu experiencia.">Tu opinión<br>nos inspira ♡</t:banner>
+    <t:banner arte="art-pedidos" icono="star" titulo="Reseñas" sub="Lee lo que opinan nuestras clientas y comparte tu experiencia.">Tu opinión<br>nos inspira ♡</t:banner>
     <div class="row g-3">
       <div class="col-4"><div class="card h-100"><h3><span><t:ic n="edit"/></span>Escribe tu reseña</h3>
         <form method="post" action="${ctx}/resenas">
@@ -25,7 +25,7 @@
           <c:when test="${not empty resenas}">
             <c:forEach var="r" items="${resenas}">
               <div class="review">
-                <div class="pic">${r.producto.emoji}</div>
+                <div class="pic"><t:foto src="${r.producto.imagen}" emoji="${r.producto.emoji}" alt="${r.producto.nombre}"/></div>
                 <div class="flex-fill">
                   <div class="d-flex justify-content-between align-items-start"><h4 class="fs-6 fw-bold mb-0">${r.producto.nombre}</h4><small class="text-body-secondary">${r.fechaTexto}</small></div>
                   <div class="stars">${bs:stars(r.calificacion)}</div>

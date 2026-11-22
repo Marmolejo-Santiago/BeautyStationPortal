@@ -12,4 +12,12 @@ public interface ProductoDAO {
     List<Producto> filtrar(int precioMax, String categoria, Set<String> categorias, String busqueda, String orden);
 
     List<Producto> promociones(String categoria);
+
+    /** Productos vigentes del catálogo, los más nuevos primero (panel de administración). */
+    List<Producto> listarParaAdmin();
+
+    Producto crear(Producto producto, int idCategoria);
+
+    /** Quita el producto del catálogo (borrado lógico) y de los carritos. */
+    boolean eliminar(int id);
 }

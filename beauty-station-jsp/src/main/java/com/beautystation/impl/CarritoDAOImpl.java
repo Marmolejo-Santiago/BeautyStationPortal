@@ -35,7 +35,7 @@ public class CarritoDAOImpl implements CarritoDAO {
             return;
         }
         Producto producto = s.get(Producto.class, idProducto);
-        if (producto == null) return;
+        if (producto == null || !producto.isActivo()) return;
         item = new CarritoItem();
         item.setUsuario(s.get(Usuario.class, idUsuario));
         item.setProducto(producto);

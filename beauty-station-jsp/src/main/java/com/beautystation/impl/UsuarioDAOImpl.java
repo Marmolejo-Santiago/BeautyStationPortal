@@ -3,6 +3,7 @@ package com.beautystation.impl;
 import com.beautystation.dao.UsuarioDAO;
 import com.beautystation.modelo.Usuario;
 import com.beautystation.util.HibernateUtil;
+import java.util.List;
 
 public class UsuarioDAOImpl implements UsuarioDAO {
 
@@ -17,6 +18,12 @@ public class UsuarioDAOImpl implements UsuarioDAO {
                 "from Usuario u where lower(u.email) = :e", Usuario.class)
                 .setParameter("e", email.trim().toLowerCase())
                 .uniqueResult());
+    }
+
+    @Override
+    public List<Usuario> listarClientes() {
+        return HibernateUtil.ejecutar(s -> s.createQuery(
+                "from Usuario u where u.rol = 'CLIENTE' order by u.nombre", Usuario.class).list());
     }
 
     @Override

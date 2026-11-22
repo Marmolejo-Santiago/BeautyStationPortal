@@ -1,6 +1,6 @@
 <t:layout ruta="citas">
     <c:set var="f" value="${sessionScope.app.form}"/>
-    <t:banner icono="calendar" titulo="Agendar Citas" sub="Reserva tu cita y disfruta de una experiencia única.">Tu belleza<br>también es<br>una cita ♡</t:banner>
+    <t:banner arte="art-citas" icono="calendar" titulo="Agendar Citas" sub="Reserva tu cita y disfruta de una experiencia única.">Tu belleza<br>también es<br>una cita ♡</t:banner>
     <form method="post" action="${ctx}/citas">
     <div class="row g-3">
       <div class="col-4"><div class="card h-100"><h3><span><t:ic n="calendar"/></span>Selecciona la fecha</h3>
@@ -16,7 +16,7 @@
           <c:forEach var="s" items="${applicationScope.servicios}"><option value="${s.id}">${s.nombre}</option></c:forEach></select>
         <c:forEach var="s" items="${applicationScope.servicios}">
           <button type="submit" name="accion" value="svc:${s.id}" class="service w-100 text-start ${f.servicios.contains(s.id) ? 'on' : ''}">
-            <span class="pic">${s.emoji}</span><span class="t">${s.nombre}<small>${s.min} min</small></span><b>&#36;${s.precio}</b><i class="radio"></i></button>
+            <span class="pic"><t:foto src="${s.imagen}" emoji="${s.emoji}" alt="${s.nombre}"/></span><span class="t">${s.nombre}<small>${s.min} min</small></span><b>&#36;${s.precio}</b><i class="radio"></i></button>
         </c:forEach></div></div>
       <div class="col-4"><div class="card h-100"><h3><span><t:ic n="clock"/></span>2. Selecciona un horario</h3>
         <c:choose>

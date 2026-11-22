@@ -41,6 +41,8 @@ public class Usuario implements Serializable {
     private Boolean notifCitas = true;
     @Column(name = "NotifNovedades")
     private Boolean notifNovedades = false;
+    @Column(name = "Rol")
+    private String rol = "CLIENTE";
 
     public Integer getId() { return id; }
     public void setId(Integer id) { this.id = id; }
@@ -68,6 +70,10 @@ public class Usuario implements Serializable {
     public void setNotifCitas(Boolean v) { this.notifCitas = v; }
     public Boolean getNotifNovedades() { return notifNovedades; }
     public void setNotifNovedades(Boolean v) { this.notifNovedades = v; }
+
+    public String getRol() { return rol == null ? "CLIENTE" : rol; }
+    public void setRol(String rol) { this.rol = rol; }
+    public boolean isAdmin() { return "ADMIN".equals(getRol()); }
 
     public int getAnioRegistro() {
         return (fechaRegistro != null ? fechaRegistro : LocalDate.now()).getYear();

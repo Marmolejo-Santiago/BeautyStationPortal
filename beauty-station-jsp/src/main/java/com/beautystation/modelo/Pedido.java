@@ -79,9 +79,9 @@ public class Pedido implements Serializable {
 
     public String getEta() { return fechaEntrega == null ? null : Fmt.fechaCorta(fechaEntrega); }
 
-    public List<String> getItems() {
-        List<String> l = new ArrayList<>();
-        for (DetallePedido d : detalles) l.add(d.getProducto().getEmoji());
+    public List<Producto> getItems() {
+        List<Producto> l = new ArrayList<>();
+        for (DetallePedido d : detalles) l.add(d.getProducto());
         return l;
     }
 

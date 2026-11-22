@@ -15,6 +15,7 @@ import java.io.IOException;
 public class AuthFilter implements Filter {
 
     public static final String SESION = "usuario";   // guarda el id (Integer) de la persona
+    public static final String ROL = "rol";          // "ADMIN" o "CLIENTE"
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
@@ -24,16 +25,26 @@ public class AuthFilter implements Filter {
         req.setCharacterEncoding("UTF-8");
 
         String ruta = req.getServletPath();
-        boolean publica = ruta.equals("/") || ruta.equals("/index.jsp") || ruta.equals("/login") || ruta.equals("/registro")
-                || ruta.startsWith("/css/") || ruta.startsWith("/img/");
+        boolean estatica = ruta.startsWith("/css/") || ruta.startsWith("/img/") || ruta.equals("/media");
+        boolean publica = estatica || ruta.equals("/") || ruta.equals("/index.jsp") || ruta.equals("/login")
+                || ruta.equals("/registro");
 
         HttpSession sesion = req.getSession(false);
         boolean autenticado = sesion != null && sesion.getAttribute(SESION) != null;
+        boolean admin = autenticado && "ADMIN".equals(sesion.getAttribute(ROL));
+        boolean zonaAdmin = ruta.equals("/admin") || ruta.startsWith("/admin/");
 
-        if (publica || autenticado) {
+        if (estatica) {
             chain.doFilter(request, response);
+        } else if (!autenticado) {
+            if (publica) chain.doFilter(request, response);
+            else resp.sendRedirect(req.getContextPath() + "/login");
+        } else if (zonaAdmin && !admin) {
+            resp.sendRedirect(req.getContextPath() + "/inicio");          // el panel es solo para administración
+        } else if (admin && !zonaAdmin && !ruta.equals("/logout") && !ruta.equals("/login")) {
+            resp.sendRedirect(req.getContextPath() + "/admin/citas");     // la cuenta admin trabaja solo en su panel
         } else {
-            resp.sendRedirect(req.getContextPath() + "/login");
+            chain.doFilter(request, response);
         }
     }
 }
