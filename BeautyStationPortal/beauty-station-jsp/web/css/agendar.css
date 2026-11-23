@@ -1,0 +1,31 @@
+.cal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-weight:700}
+.cal-head button{width:28px;height:28px;border-radius:50%;color:var(--pink-hot)}
+.cal-head button:hover{background:var(--soft-2)}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center;font-size:.8rem}
+.cal .dow{color:var(--muted);font-size:.72rem;font-weight:600;padding:6px 0}
+.cal .d{height:34px;width:34px;margin:auto;border-radius:50%;display:grid;place-items:center;font-weight:600;transition:.12s}
+.cal .d.out{color:#c6ccd4}
+.cal .d.wk{background:var(--soft-2);color:var(--pink-hot)}
+.cal .d.past{color:#c6ccd4;background:none;cursor:not-allowed}
+.cal .d:not(.past):not(.out):hover{background:var(--soft)}
+.cal .d.sel{background:var(--pink-hot);color:#fff}
+.cal .d.today{outline:2px solid var(--pink);outline-offset:-2px}
+.cal .d.mark::after{content:"";position:absolute;margin-top:24px;width:4px;height:4px;border-radius:50%;background:var(--pink-hot)}
+.cal .d.mark{position:relative}
+.info-bar{display:flex;gap:10px;align-items:center;padding:12px;margin-top:14px;border-radius:12px;background:var(--soft-3);font-size:.78rem}
+.info-bar span{color:var(--pink-hot)}
+.info-bar small{display:block;color:var(--muted)}
+.service{display:flex;align-items:center;gap:12px;padding:10px;border-radius:12px;cursor:pointer;border:1.5px solid transparent;transition:.15s}
+.service:hover{background:var(--soft-3)}
+.service.on{background:var(--soft-3);border-color:var(--soft)}
+.service .pic{width:42px;height:42px;border-radius:10px;display:grid;place-items:center;font-size:1.3rem;background:linear-gradient(135deg,var(--soft),#f6a9bb)}
+.service .t{flex:1;font-weight:600;font-size:.86rem}
+.service .t small{display:block;color:var(--muted);font-weight:500}
+.service b{font-size:.84rem}
+.service .radio{width:16px;height:16px;border-radius:50%;border:2px solid var(--muted)}
+.service.on .radio{border:5px solid var(--pink-hot)}
+.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.slot{height:36px;border-radius:99px;border:1px solid var(--line);font-weight:600;font-size:.82rem;background:var(--bg);transition:.15s}
+.slot:hover:not(:disabled){background:var(--soft-2)}
+.slot.on{background:var(--pink-hot);color:#fff;border-color:var(--pink-hot)}
+.slot:disabled{color:#c6ccd4;text-decoration:line-through;cursor:not-allowed;background:#f4f5f7}

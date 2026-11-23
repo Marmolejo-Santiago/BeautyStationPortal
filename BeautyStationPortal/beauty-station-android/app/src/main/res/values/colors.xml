@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paleta del Look and Feel -->
+    <color name="bs_blanco_hueso">#F9F9F9</color>
+    <color name="bs_rosa_algodon">#EDC0BF</color>
+    <color name="bs_rosa_magenta">#FF6F91</color>
+    <color name="bs_rosa_intenso">#F23B6C</color>
+    <color name="bs_negro_carbon">#1E1E24</color>
+    <color name="bs_gris_azulado">#8F9EAE</color>
+    <color name="bs_barra_inferior">#FDF0F2</color>
+</resources>

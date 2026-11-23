@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.BeautyStation" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/bs_rosa_magenta</item>
+        <item name="colorPrimaryDark">@color/bs_rosa_intenso</item>
+        <item name="colorAccent">@color/bs_rosa_intenso</item>
+        <item name="android:windowBackground">@drawable/fondo_carga</item>
+        <item name="android:statusBarColor">@color/bs_rosa_magenta</item>
+        <item name="android:navigationBarColor">@color/bs_barra_inferior</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+</resources>

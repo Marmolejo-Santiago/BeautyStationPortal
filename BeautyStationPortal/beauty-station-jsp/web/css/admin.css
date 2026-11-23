@@ -1,0 +1,12 @@
+/* ---------- Panel de administración ---------- */
+.admin-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:16px}
+.admin-stats div{background:var(--soft-3);border-radius:14px;padding:12px 14px}
+.admin-stats b{display:block;font-size:1.4rem;line-height:1.2;color:var(--ink)}
+.admin-stats small{color:var(--muted);font-size:.74rem}
+.order-row{padding:14px 0;border-bottom:1px solid var(--line)}
+.order-row:last-child{border-bottom:0}
+.admin-product{position:relative;border:1px solid var(--line);border-radius:14px;padding:10px;background:var(--bg);height:100%}
+.admin-product .pic{height:120px;border-radius:10px;margin-bottom:8px}
+.admin-product .name{font-weight:600;font-size:.86rem;line-height:1.25}
+.admin-product .price{font-weight:700;color:var(--pink-hot);margin:2px 0}
+.admin-product .tag-badge{position:absolute;top:16px;left:16px;z-index:1;background:var(--pink-hot);color:#fff;border-radius:999px;font-size:.66rem;font-weight:700;padding:2px 9px}

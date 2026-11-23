@@ -1,0 +1,8 @@
+.cat-tab{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 4px;border-radius:12px;background:var(--bg);border:1px solid var(--line);font-size:.78rem;font-weight:600;transition:.15s}
+.cat-tab .e{font-size:1.5rem}
+.cat-tab:hover{background:var(--soft-3)}
+.cat-tab.on{background:var(--soft-2);border-color:var(--soft);color:var(--pink-hot)}
+.filters h4{font-size:.85rem;margin:14px 0 8px;font-weight:700}
+.filters h4:first-child{margin-top:0}
+.filters input[type=checkbox]{accent-color:var(--pink-hot);width:15px;height:15px}
+.filters input[type=range]{width:100%;accent-color:var(--pink-hot)}

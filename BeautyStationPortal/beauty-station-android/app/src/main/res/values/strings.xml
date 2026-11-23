@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Beauty Station</string>
+    <!-- 10.0.2.2 es la PC anfitriona vista desde el emulador de Android Studio -->
+    <string name="url_servidor" translatable="false">http://10.0.2.2:8080/beauty-station</string>
+    <string name="servidor_titulo">Servidor de Beauty Station</string>
+    <string name="servidor_mensaje">Dirección donde corre el portal web (por ejemplo http://192.168.1.50:8080/beauty-station).</string>
+    <string name="guardar">Guardar</string>
+    <string name="restablecer">Restablecer</string>
+    <string name="direccion_invalida">Escribe una dirección válida</string>
+    <string name="no_se_puede_abrir">No hay una aplicación para abrir este enlace</string>
+</resources>

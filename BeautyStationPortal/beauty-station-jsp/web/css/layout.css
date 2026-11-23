@@ -1,0 +1,25 @@
+.app{display:grid;grid-template-columns:240px 1fr;min-height:100vh}
+.sidebar{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;padding:0 16px 18px;color:#fff;
+  background:linear-gradient(180deg,#ff6f91 0%,#f95d89 55%,#ff8aa6 100%);overflow:hidden}
+.sidebar::after{content:"";position:absolute;left:-60%;bottom:60px;width:220%;height:220px;border-radius:50%;background:rgba(255,255,255,.12);pointer-events:none}
+#nav{display:flex;flex-direction:column;gap:6px;margin-top:10px;position:relative;z-index:1}
+#nav a{display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:999px;font-weight:600;font-size:.93rem;transition:.18s}
+#nav a:hover{background:rgba(255,255,255,.2)}
+#nav a.active{background:#fff;color:var(--pink-hot);box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.sidebar-user{margin-top:auto;position:relative;z-index:1}
+.user-pill{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:999px;background:rgba(255,255,255,.2)}
+.user-pill.active{background:#fff;color:var(--pink-hot)}
+.avatar{width:34px;height:34px;border-radius:50%;background:#fff;color:var(--pink);display:grid;place-items:center}
+.logout{display:flex;align-items:center;gap:8px;margin:12px 0 0 14px;color:#fff;font-size:.8rem;font-weight:500}
+.logout:hover{text-decoration:underline}
+
+.content{min-width:0;padding:18px 28px 40px}
+.topbar{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.search{flex:1;display:flex;align-items:center;gap:10px;height:44px;border-radius:999px;background:#eef0f4;padding:0 18px;color:var(--ink)}
+.search input{flex:1;border:0;background:transparent;outline:0}
+.search input::placeholder{color:var(--muted)}
+.search:focus-within{box-shadow:0 0 0 2px var(--soft)}
+.icon-btn{position:relative;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:var(--ink);transition:.15s}
+.icon-btn:hover{background:var(--soft-2);color:var(--pink-hot)}
+.dot{position:absolute;top:8px;right:9px;width:8px;height:8px;border-radius:50%;background:var(--pink-hot)}
+.count{position:absolute;top:2px;right:0;min-width:17px;height:17px;border-radius:99px;background:var(--pink-hot);color:#fff;font-size:.65rem;font-style:normal;font-weight:700;display:grid;place-items:center;padding:0 4px}

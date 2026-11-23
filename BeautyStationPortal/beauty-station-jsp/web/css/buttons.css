@@ -1,0 +1,8 @@
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:0 20px;height:44px;border-radius:999px;font-weight:700;transition:.18s;white-space:nowrap}
+.btn-primary{background:var(--pink);color:#fff}
+.btn-primary:hover{background:#ff5a82}
+.btn-primary:active,.btn-primary:focus-visible{background:var(--pink-hot);outline:3px solid rgba(242,59,108,.25)}
+.btn-sm{height:32px;padding:0 14px;font-size:.78rem}
+.btn-google{background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.9);width:60%;color:var(--ink)}
+.btn-google b{color:#4285F4;font-size:1.1rem}
+.login .btn-primary{background:var(--pink-hot)}

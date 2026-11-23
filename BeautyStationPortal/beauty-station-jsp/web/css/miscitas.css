@@ -1,0 +1,12 @@
+.appt{display:grid;grid-template-columns:62px 62px 1fr auto;gap:14px;align-items:center;padding:12px;border-radius:14px;border:1px solid var(--line);margin-bottom:12px;background:var(--bg)}
+.appt .date{text-align:center;background:var(--soft-2);border-radius:12px;padding:8px 0;font-size:.7rem;color:var(--muted)}
+.appt .date b{display:block;font-size:1.4rem;color:var(--ink);line-height:1.1}
+.appt .pic{height:62px;width:62px;border-radius:12px;display:grid;place-items:center;font-size:1.7rem;background:linear-gradient(135deg,var(--soft),#f6a9bb)}
+.appt h4{font-size:.92rem}
+.appt small{display:flex;gap:6px;align-items:center;color:#667;font-size:.74rem;margin-top:3px}
+.appt small span{color:var(--pink-hot)}
+.appt .side{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+.stat{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:12px;background:var(--soft-3);margin-bottom:8px;font-size:.84rem}
+.stat span{color:var(--pink-hot)}
+.stat b{margin-left:auto}
+.empty{padding:40px;text-align:center;color:var(--muted)}

@@ -1,0 +1,13 @@
+.splash{animation:fin-splash .01s 1.8s forwards}
+@keyframes fin-splash{to{visibility:hidden}}
+
+.toast.show{animation:vida-toast 2.5s forwards}
+@keyframes vida-toast{0%{opacity:0}6%{opacity:1}92%{opacity:1}100%{opacity:0;visibility:hidden}}
+
+.modal:target{display:block;opacity:1;background:rgba(0,0,0,.5)}
+.modal:target .modal-dialog{transform:none}
+.modal-bg{position:fixed;inset:0}
+
+.clave{-webkit-text-security:disc;text-security:disc}
+#ver-pass:checked ~ .field .clave{-webkit-text-security:none;text-security:none}
+.field .ojo{display:grid;place-items:center;cursor:pointer;color:var(--ink)}

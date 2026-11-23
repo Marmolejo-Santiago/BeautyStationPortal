@@ -1,0 +1,26 @@
+.screen{position:fixed;inset:0;overflow:hidden;background:linear-gradient(135deg,#ff7fa0,#f2588a)}
+.blob{position:absolute;border-radius:50%;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35)}
+.blob-tl{width:520px;height:420px;top:-200px;left:-120px}
+.blob-br{width:560px;height:360px;bottom:-190px;right:-120px}
+.blob-bl{width:420px;height:300px;bottom:-170px;left:-100px}
+.splash{display:grid;place-items:center}
+.splash-content{display:flex;flex-direction:column;align-items:center;gap:18px;position:relative}
+.splash-text{font-size:1.5rem;font-weight:500;letter-spacing:.2px}
+
+.login{display:grid;grid-template-columns:1fr 1fr;align-items:center}
+.login-card{position:relative;z-index:2;width:420px;justify-self:center;display:flex;flex-direction:column;align-items:center;text-align:center}
+.login-card h1{font-size:2rem;font-weight:800;margin-top:10px}
+.login-sub{font-size:.92rem;margin:6px 0 22px;line-height:1.4}
+.field{display:flex;align-items:center;gap:10px;width:100%;background:rgba(255,255,255,.82);border-radius:14px;padding:0 14px;height:48px;margin-bottom:12px;color:var(--ink);border:2px solid transparent;transition:.2s}
+.field:focus-within{border-color:var(--pink-hot);background:#fff}
+.field input{flex:1;border:0;background:transparent;outline:0;height:100%}
+.field input::placeholder{color:var(--muted)}
+.field button{color:var(--ink);display:grid;place-items:center}
+.link{text-decoration:underline;color:var(--pink-hot);font-weight:600}
+.link.strong{font-weight:800}
+.divider{display:flex;align-items:center;gap:12px;width:100%;margin:16px 0;font-size:.78rem}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:rgba(30,30,36,.25)}
+.login-foot{margin-top:14px;font-size:.85rem}
+.login-photo{position:absolute;right:0;top:0;bottom:0;width:52%;
+  background:url('../img/salon.jpg') center/cover,linear-gradient(160deg,#c9a38d,#8d5f4b 60%,#e6c7b8);
+  clip-path:ellipse(95% 130% at 100% 50%);z-index:1}
