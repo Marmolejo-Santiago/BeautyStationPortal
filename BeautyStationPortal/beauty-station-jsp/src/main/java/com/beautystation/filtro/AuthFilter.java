@@ -25,7 +25,7 @@ public class AuthFilter implements Filter {
         req.setCharacterEncoding("UTF-8");
 
         String ruta = req.getServletPath();
-        boolean estatica = ruta.startsWith("/css/") || ruta.startsWith("/img/") || ruta.equals("/media");
+        boolean estatica = ruta.startsWith("/css/") || ruta.startsWith("/js/") || ruta.startsWith("/img/") || ruta.equals("/media");
         boolean publica = estatica || ruta.equals("/") || ruta.equals("/index.jsp") || ruta.equals("/login")
                 || ruta.equals("/registro");
 

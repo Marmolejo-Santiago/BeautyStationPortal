@@ -24,3 +24,5 @@
 <link rel="stylesheet" href="${ctx}/css/extras.css">
 <link rel="stylesheet" href="${ctx}/css/imagenes.css">
 <link rel="stylesheet" href="${ctx}/css/admin.css">
+<link rel="stylesheet" href="${ctx}/css/mobile.css">
+<script src="${ctx}/js/mobile.js" defer></script>

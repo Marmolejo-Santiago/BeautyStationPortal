@@ -1,0 +1,138 @@
+/* =====================================================================
+   Beauty Station · diseño móvil (Look and Feel)
+   Se carga en la web (css/mobile.css); la app Android usa su propia copia.
+   Todo va con el prefijo html.bs-mobile (lo pone mobile.js).
+   ===================================================================== */
+html.bs-mobile { -webkit-text-size-adjust: 100%; }
+html.bs-mobile body { background: var(--bg, #F9F9F9); -webkit-tap-highlight-color: transparent; }
+
+/* ---------- estructura: sin barra lateral, contenido a todo el ancho ---------- */
+html.bs-mobile .app { display: block; min-height: 100vh; padding-bottom: 86px; }
+html.bs-mobile .sidebar { display: none !important; }
+html.bs-mobile .content { padding: 12px 14px 20px; }
+
+/* ---------- barra superior: logo + buscador + iconos ---------- */
+html.bs-mobile .topbar.gap-3 { gap: 8px !important; }
+html.bs-mobile .topbar.mb-4 { margin-bottom: 12px !important; }
+html.bs-mobile .search { height: 40px; padding: 0 12px; gap: 8px; min-width: 0; }
+html.bs-mobile .search input { min-width: 0; font-size: .82rem; }
+html.bs-mobile .icon-btn { width: 36px; height: 36px; flex: none; }
+html.bs-mobile .bs-logo {
+  flex: none; width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center;
+  background: linear-gradient(135deg, #ff6f91, #f95d89); box-shadow: 0 4px 10px rgba(242, 59, 108, .25);
+}
+html.bs-mobile .bs-logo .logo { font-size: 1.45rem; padding: 0; color: #fff; }
+
+/* ---------- cuadrículas: todo apilado, productos de 2 en 2, categorías deslizables ---------- */
+html.bs-mobile .row.g-3 > [class*="col-"] { flex: 0 0 100%; width: 100%; max-width: 100%; }
+html.bs-mobile .row.row-cols-3 > *,
+html.bs-mobile .row.row-cols-4 > *,
+html.bs-mobile .row.row-cols-6 > * { flex: 0 0 50%; width: 50%; }
+html.bs-mobile .row.row-cols-5 {
+  flex-wrap: nowrap; overflow-x: auto; margin-left: 0; margin-right: 0; padding-bottom: 4px;
+  -webkit-overflow-scrolling: touch; scrollbar-width: none;
+}
+html.bs-mobile .row.row-cols-5::-webkit-scrollbar { display: none; }
+html.bs-mobile .row.row-cols-5 > * { flex: 0 0 132px; width: 132px; }
+html.bs-mobile .bs-hscroll { display: flex; overflow-x: auto; gap: 8px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+html.bs-mobile .bs-hscroll::-webkit-scrollbar { display: none; }
+html.bs-mobile .bs-hscroll > .cat-tab { flex: 0 0 82px; }
+html.bs-mobile .pills { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+html.bs-mobile .pills::-webkit-scrollbar { display: none; }
+html.bs-mobile .pills .nav-link { white-space: nowrap; }
+
+/* ---------- banners ---------- */
+html.bs-mobile .banner { min-height: 96px; padding: 14px 16px; gap: 10px; margin-bottom: 14px; }
+html.bs-mobile .banner .banner-lead { gap: 12px; flex: 1; min-width: 0; }
+html.bs-mobile .banner .banner-ico { width: 40px; height: 40px; border-radius: 12px; }
+html.bs-mobile .banner h1 { font-size: 1.2rem; }
+html.bs-mobile .banner p { font-size: .72rem; margin-top: 2px; }
+html.bs-mobile .banner > .script { display: none; }
+html.bs-mobile .banner .art { width: 104px; margin: -14px -16px -14px 0; flex: none; }
+html.bs-mobile .banner .logo-lg { display: none; }
+html.bs-mobile .banner.hero { min-height: 176px; padding: 20px 18px; }
+html.bs-mobile .banner.hero h1 { font-size: 1.55rem; }
+html.bs-mobile .banner.hero p { max-width: 58%; font-size: .8rem; }
+html.bs-mobile .hero .script { display: none; }
+
+/* ---------- tarjetas, tiras y secciones ---------- */
+html.bs-mobile .card { padding: 14px; border-radius: 18px; }
+html.bs-mobile .section-head { margin: 16px 0 10px; }
+html.bs-mobile .promo-strip { flex-wrap: wrap; gap: 12px; padding: 14px 16px; }
+html.bs-mobile .promo-strip .btn { margin-left: 0; }
+html.bs-mobile .promo-strip h3 { font-size: 1.1rem; }
+html.bs-mobile .product .pic { height: 108px; }
+html.bs-mobile .product-lg .pic { height: 118px; }
+html.bs-mobile .cat .thumb { height: 74px; }
+
+/* ---------- catálogo: filtros plegables ---------- */
+html.bs-mobile .filters { position: static; max-height: none; }
+html.bs-mobile .bs-collapsed { display: none !important; }
+html.bs-mobile .bs-filter-toggle {
+  display: flex; align-items: center; justify-content: space-between; width: 100%; height: 42px; padding: 0 16px;
+  border-radius: 999px; background: #fff; border: 1.5px solid var(--soft, #EDC0BF); color: var(--pink-hot, #F23B6C);
+  font-weight: 700; font-size: .85rem; margin-bottom: 12px;
+}
+
+/* ---------- citas ---------- */
+html.bs-mobile .appt { grid-template-columns: 54px 54px 1fr; gap: 10px; padding: 10px; }
+html.bs-mobile .appt .pic { width: 54px; height: 54px; }
+html.bs-mobile .appt .side { grid-column: 1 / -1; flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+html.bs-mobile .cal .d { width: 36px; height: 36px; }
+
+/* ---------- pedidos, usuario, acerca de ---------- */
+html.bs-mobile .thumbs { flex-wrap: wrap; }
+html.bs-mobile .profile { flex-wrap: wrap; }
+html.bs-mobile .profile .btn { margin-left: 0; }
+html.bs-mobile .cta-vertical { min-height: 420px; }
+html.bs-mobile .founders { gap: 10px; }
+html.bs-mobile .founders i { width: 66px; height: 66px; }
+
+/* ---------- ventanas emergentes y avisos ---------- */
+html.bs-mobile .modal-body { max-height: 70vh; overflow-y: auto; }
+html.bs-mobile .toast-container.bottom-0 { bottom: 86px !important; }
+
+/* ---------- pantallas de carga, inicio de sesión y registro ---------- */
+html.bs-mobile .logo-xl { font-size: 5.5rem; }
+html.bs-mobile .screen.login { display: block; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+html.bs-mobile .login-card { width: 100%; max-width: 400px; margin: 0 auto; padding: 34px 24px 200px; }
+html.bs-mobile .registro .login-card { padding: 22px 24px 190px; }
+html.bs-mobile .login-card .logo-lg { font-size: 3.4rem; }
+html.bs-mobile .login-card h1 { font-size: 1.7rem; }
+html.bs-mobile .btn-google { width: 70%; }
+html.bs-mobile .login-photo {
+  position: fixed; left: 0; right: 0; top: auto; bottom: 0; width: 100%; height: 165px;
+  clip-path: ellipse(72% 100% at 50% 100%);
+}
+
+/* ---------- barra inferior (como en el Look and Feel móvil) ---------- */
+#bs-tabbar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 1000; display: flex;
+  padding: 6px 4px calc(6px + env(safe-area-inset-bottom, 0px));
+  background: rgba(255, 255, 255, .97); border-radius: 20px 20px 0 0; box-shadow: 0 -6px 20px rgba(242, 59, 108, .16);
+}
+#bs-tabbar > a, #bs-tabbar > button {
+  flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 2px;
+  position: relative; color: var(--muted, #8F9EAE); font-size: .64rem; font-weight: 600; background: none; border: 0;
+}
+#bs-tabbar svg { width: 22px; height: 22px; }
+#bs-tabbar .on { color: var(--pink-hot, #F23B6C); }
+#bs-tabbar .on::after { content: ""; position: absolute; bottom: -1px; width: 22px; height: 3px; border-radius: 3px; background: var(--pink-hot, #F23B6C); }
+
+/* ---------- menú inferior (logo): todas las secciones ---------- */
+.bs-sheet { position: fixed; inset: 0; z-index: 1200; display: none; }
+.bs-sheet.open { display: block; }
+.bs-sheet .bs-bg { position: absolute; inset: 0; background: rgba(30, 30, 36, .45); }
+.bs-sheet .bs-panel {
+  position: absolute; left: 0; right: 0; bottom: 0; max-height: 82vh; overflow-y: auto; background: #fff;
+  border-radius: 22px 22px 0 0; padding: 14px 14px calc(18px + env(safe-area-inset-bottom, 0px)); animation: bs-sube .22s ease;
+}
+.bs-sheet .bs-panel h2 { font-size: .8rem; letter-spacing: 1.5px; color: var(--muted, #8F9EAE); font-weight: 800; padding: 4px 12px 8px; }
+.bs-sheet .bs-panel a, .bs-sheet .bs-panel button {
+  display: flex; align-items: center; gap: 14px; width: 100%; padding: 13px 12px; border-radius: 14px; text-align: left;
+  font-size: .95rem; font-weight: 600; color: var(--ink, #1E1E24); background: none; border: 0;
+}
+.bs-sheet .bs-panel svg { width: 22px; height: 22px; color: var(--pink-hot, #F23B6C); flex: none; }
+.bs-sheet .bs-panel .on { background: var(--soft-2, #fbe3e6); color: var(--pink-hot, #F23B6C); }
+.bs-sheet .bs-panel .bs-salir { margin-top: 6px; border-top: 1px solid var(--line, #f1e3e6); border-radius: 0 0 14px 14px; }
+@keyframes bs-sube { from { transform: translateY(100%); } to { transform: none; } }
